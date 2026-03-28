@@ -4,38 +4,34 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const epilogues = [
-  { text: "Thank you for your hard work all these while.", to: "Aglaea" },
-  { text: "From now on, no more goodbyes.", to: "Tribios" },
-  { text: "Mydeimos, become king.", to: "Mydei" },
-  { text: "The place you reside is the gentle sea of flowers.", to: "Castorice" },
-  { text: "The seeds you've sown are already sprouting.", to: "Anaxa" },
-  { text: "It's you who healed the sky.", to: "Hyacine" },
-  { text: "Homeward you come, distant wind.", to: "Cipher" },
-  { text: "Did you see? Amphoreus has ushered in the dawn.", to: "Phainon" },
-  { text: "May the next feast be eternal.", to: "Hysilens" },
-  { text: "The stars shall sing of the Imperator's great journey.", to: "Cerydra" },
-  { text: "We were never apart.", to: "March 7th" },
-  { text: "Let's walk towards tomorrow together!", to: "Dan Heng • Permansor Terrae" },
-  // --- Teks Placeholder untuk MC & Cyrene (Bisa kamu ubah nanti) ---
-  { text: "May your journey lead you starward.", to: "Trailblazer" },
-  { text: "The story you left behind will be remembered forever.", to: "Cyrene" }
+  { text: "Without me, there is no world. Go think, observe... And conquer.", character: "Cerydra" },
+  { text: "Life is like the ocean: Tides rise and fall, and everything eventually dissolves into the waves. So, sing your heart out in every moment of your existence.", character: "Helektra" },
+  { text: "K'll the play, and games shall be born. K'll the strife, and glory shall descend.", character: "Mydeimos" },
+  { text: "If your heart still has room to spare, share a bit of gentleness and softly cherish all the beautiful things around you.", character: "Castorice" },
+  { text: "Truth is a solvent that dissolves all things in the world, and thus cannot objectively exist. I have a brilliant proof for this in mind, but since we're nearing the end of the story, I shall not elaborate.", character: "Anaxagoras" },
+  { text: "Trust and selflessness are the two most beautiful garments in the world: one to gift others, one to adorn yourself.", character: "Aglaea" },
+  { text: "Look up at the sky more often and smile more. Many stubborn ailments fear optimism, but it's the best medicine!", character: "Hyacinthia" },
+  { text: "Don't be afraid to fall: just run! Destiny's just a slow-moving nymph. It can't catch you!", character: "Cifera" },
+  { text: "Whether it's a sunny day or rainy day, remember to tell yourself before you drift off to sleep: 'See you tomorrow!'", character: "Tribbios" },
+  { text: "A hero is living in everyone's heart. Embrace it, and chase after the Sun.", character: "Khaslana" },
+  { text: "The pen will eventually break, the ink will run dry, and life will ultimately fade, but thoughts remain in sagas.", character: "Dan Heng" },
+  { text: "If time is an endless cycle, then forget the bitterness that keeps repeating, and remember only the moments of happiness!", character: "March 7th" },
+  { text: "And with this, As I've Written officially comes to an end... See you later.", character: "Cyrene" }
 ];
 
 export default function EpilogueText() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    // Menggunakan setTimeout yang bergantung pada perubahan index
     const timer = setTimeout(() => {
       setIndex((prev) => (prev + 1) % epilogues.length);
-    }, 5000); // 5000 ms = 5 detik
+    }, 7000); 
     
-    // Cleanup function untuk mencegah kebocoran memori
     return () => clearTimeout(timer);
   }, [index]);
 
   return (
-    <div className="pointer-events-auto flex justify-center">
+    <div className="pointer-events-auto flex justify-center w-full px-4 md:px-12">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -43,17 +39,14 @@ export default function EpilogueText() {
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          // Ubah flex-row menjadi flex-col dan items-center agar menumpuk rapi di tengah
-          className="flex flex-col items-center justify-center gap-1 md:gap-2 text-center"
+          className="flex flex-col items-center justify-center gap-2 md:gap-3 text-center max-w-3xl"
         >
-          {/* Kalimat Kutipan */}
-          <span className="text-indigo-50 font-serif italic text-xs md:text-sm lg:text-base drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] px-4">
+          <span className="text-indigo-50 font-serif italic text-xs md:text-sm lg:text-base drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] leading-tight md:leading-relaxed">
             "{epilogues[index].text}"
           </span>
           
-          {/* Target Karakter */}
           <span className="text-indigo-400 font-mono tracking-widest text-[10px] md:text-xs uppercase drop-shadow-[0_0_5px_rgba(99,102,241,0.8)] mt-1">
-            to {epilogues[index].to}
+            ~ {epilogues[index].character}
           </span>
         </motion.div>
       </AnimatePresence>
