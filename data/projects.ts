@@ -36,7 +36,7 @@ export const projects: Project[] = [
   {
     id: 'proj-3',
     folderName: 'Academic Project',
-    title: 'Bread Store Application [Mobile & Web]',
+    title: 'Bread Store [Mobile & Web]',
     date: 'June 2024',
     description: 'As a backend role, I developed a Restful API for a bread store application with features like inventory management, sales tracking, and customer management.',
     tech: ['PHP', 'Laravel', 'MySQL'],
