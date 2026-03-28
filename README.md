@@ -1,8 +1,8 @@
-# 🌌 As I've Written - Personal Portfolio OS
+# As I've Written - Personal Portfolio
 
-Welcome to **As I've Written**, an interactive personal portfolio styled as a cosmic Operating System (OS). This project is not just a standard resume, but an interface experience that blends sci-fi aesthetics, narrative elements (lore), and modern frontend design.
+Welcome to **As I've Written**, an interactive personal portfolio styled after the "**As I've Written**" interface in Honkai: Star Rail. This project is heavily inspired by the lore of Amphoreus.
 
-Crafted by **Dionisius Geovanni Caesario** (Hanashiro Yuriku) — *Backend Engineer & Data Analyst*.
+Crafted by **Dionisius Geovanni Caesario** | **Hanashiro Yuriku**
 
 ## System Modules (Key Features)
 
