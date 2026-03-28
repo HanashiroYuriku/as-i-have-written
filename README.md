@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌌 As I've Written - Personal Portfolio OS
 
-## Getting Started
+Welcome to **As I've Written**, an interactive personal portfolio styled as a cosmic Operating System (OS). This project is not just a standard resume, but an interface experience that blends sci-fi aesthetics, narrative elements (lore), and modern frontend design.
 
-First, run the development server:
+Crafted by **Dionisius Geovanni Caesario** (Hanashiro Yuriku) — *Backend Engineer & Data Analyst*.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ System Modules (Key Features)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Desktop Interface & Real-time Clock:** An initial view resembling a futuristic OS terminal screen with a synchronously running clock.
+* **Holographic Glitch Overlay:** Elegant holographic scanlines and flicker visual effects built using Framer Motion without disrupting button interactivity (Z-Index Hierarchy).
+* **Dionisius.exe (Profile):** A self-introduction module featuring glowing tech arsenal badges and interactive photo transitions.
+* **Chronicles.exe (Experience):** An interactive career journey logbook utilizing a reverse chronological navigation concept (Chapter system).
+* **Resume.exe:** A historical track record accompanied by the animation of the assistant, *Mem*. 
+* **Transmission.exe (Contact):** A dark-mode, terminal-style communication interface for various professional and creator network protocols.
+* **Epilogue Quotes:** A dynamic closing quotes module displaying lines from various cosmos observers.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Arsenal
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This portfolio system is built using cutting-edge technologies:
+* **Framework:** [Next.js](https://nextjs.org/) (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Animation & Micro-interactions:** Framer Motion
+* **Icons:** Lucide React
+* **Deployment:** Vercel
 
-## Learn More
+## 🚀 System Boot Sequence (Getting Started)
 
-To learn more about Next.js, take a look at the following resources:
+To run this system in your own local environment:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone this repository to your local directory.
+2. Open your terminal and run the dependencies installation:
+   ```bash
+   npm install
+   # or yarn install / pnpm install```
+3. Boot up the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```Bash
+   npm run dev```
+4. Open http://localhost:3000 in your browser to see the interface light up.
 
-## Deploy on Vercel
+## 🤝 Credits & Acknowledgments
+Developer: **Hanashiro Yuriku**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+AI Co-Pilot & Coding Companion: Google Gemini
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Theme Inspiration: Amphoreus.
+
+"And with this, As I've Written officially comes to an end... See you later."
