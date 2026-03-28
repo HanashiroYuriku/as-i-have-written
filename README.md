@@ -4,17 +4,18 @@ Welcome to **As I've Written**, an interactive personal portfolio styled as a co
 
 Crafted by **Dionisius Geovanni Caesario** (Hanashiro Yuriku) — *Backend Engineer & Data Analyst*.
 
-## ✨ System Modules (Key Features)
+## System Modules (Key Features)
 
 * **Desktop Interface & Real-time Clock:** An initial view resembling a futuristic OS terminal screen with a synchronously running clock.
 * **Holographic Glitch Overlay:** Elegant holographic scanlines and flicker visual effects built using Framer Motion without disrupting button interactivity (Z-Index Hierarchy).
 * **Dionisius.exe (Profile):** A self-introduction module featuring glowing tech arsenal badges and interactive photo transitions.
 * **Chronicles.exe (Experience):** An interactive career journey logbook utilizing a reverse chronological navigation concept (Chapter system).
+* **Projects.wav (Portfolio):** An archive of technical deployments and data analysis records, featuring immersive UI elements and detailed project logs.
 * **Resume.exe:** A historical track record accompanied by the animation of the assistant, *Mem*. 
 * **Transmission.exe (Contact):** A dark-mode, terminal-style communication interface for various professional and creator network protocols.
 * **Epilogue Quotes:** A dynamic closing quotes module displaying lines from various cosmos observers.
 
-## 🛠️ Tech Arsenal
+## Tech Arsenal
 
 This portfolio system is built using cutting-edge technologies:
 * **Framework:** [Next.js](https://nextjs.org/) (App Router)
@@ -24,7 +25,7 @@ This portfolio system is built using cutting-edge technologies:
 * **Icons:** Lucide React
 * **Deployment:** Vercel
 
-## 🚀 System Boot Sequence (Getting Started)
+## System Boot Sequence (Getting Started)
 
 To run this system in your own local environment:
 
@@ -32,14 +33,14 @@ To run this system in your own local environment:
 2. Open your terminal and run the dependencies installation:
    ```bash
    npm install
-   # or yarn install / pnpm install```
+   # or yarn install / pnpm install
 3. Boot up the development server:
 
     ```Bash
-   npm run dev```
+   npm run dev
 4. Open http://localhost:3000 in your browser to see the interface light up.
 
-## 🤝 Credits & Acknowledgments
+## Credits & Acknowledgments
 Developer: **Hanashiro Yuriku**
 
 AI Co-Pilot & Coding Companion: Google Gemini
