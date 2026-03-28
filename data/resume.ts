@@ -13,7 +13,7 @@ export interface TimelineItem {
 export const resumeTimeline: TimelineItem[] = [
   { 
     date: "March 2026", 
-    content: "Data Analyst Sertification from Udemy. Learned how to analyze data and create visualizations." 
+    content: "Data Analyst Certification from Udemy. Learned how to analyze data and create visualizations." 
   },
   { 
     date: "November 2025", 
