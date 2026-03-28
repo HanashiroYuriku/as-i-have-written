@@ -36,7 +36,10 @@ export default function ProfileApp() {
           <p className="text-xs uppercase tracking-widest text-[#8b6b4a] mb-3 font-bold border-b border-[#c2a878]/30 pb-1 inline-block">Tech Arsenal</p>
           <div className="flex flex-wrap gap-2">
             {['Golang', 'Laravel', 'Next.js', 'PHP', 'TypeScript', 'MySQL', 'PostgreSQL', 'Redis', 'PowerBI', 'Tableau'].map((tech) => (
-              <span key={tech} className="px-3 py-1.5 bg-[#dfd6c1] border border-[#c2a878]/50 rounded-full text-xs font-bold text-[#5c4b3f] shadow-sm">
+              <span 
+                key={tech} 
+                className="px-3 py-1.5 bg-[#dfd6c1] border border-[#c2a878]/50 rounded-full text-xs font-bold text-[#5c4b3f] shadow-sm transition-all duration-300 hover:border-[#c2a878] hover:shadow-[0_0_10px_#c2a878] hover:-translate-y-0.5 cursor-default"
+              >
                 {tech}
               </span>
             ))}
@@ -59,8 +62,13 @@ export default function ProfileApp() {
         {/* Bingkai Foto */}
         <div className="relative z-10 p-3 bg-[#f8f4e6] border-2 border-[#c2a878] shadow-xl">
           <div className="w-48 h-64 md:w-64 md:h-80 bg-[#d3c5af] flex items-center justify-center overflow-hidden border border-[#c2a878]/50 relative group">            
-            <span className="font-serif text-[#8b6b4a] tracking-widest">FOTO PROFIL</span>
-            <img src="/profile-pict.jpeg" alt="Dionisius Geovanni" className="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" />
+            <span className="font-serif text-[#8b6b4a] tracking-widest z-0">FOTO PROFIL</span>
+            
+            <img 
+              src="/profile-pict.jpeg" 
+              alt="Dionisius Geovanni" 
+              className="absolute inset-0 z-10 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+            />
           </div>
         </div>
 
