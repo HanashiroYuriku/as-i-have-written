@@ -1,4 +1,3 @@
-// data/projects.ts
 
 export interface Project {
   id: string;
@@ -48,7 +47,7 @@ export const projects: Project[] = [
     id: 'proj-2',
     folderName: 'Academic Project',
     title: 'Laundry Application [Web]',
-    date: 'June 2024',
+    date: 'December 2023',
     description: 'Developing a laundry website that facilitates users in ordering laundry pick-up and making washing machine rental reservations.',
     tech: ['PHP', 'Laravel', 'MySQL'],
     github: '',
@@ -58,7 +57,7 @@ export const projects: Project[] = [
     id: 'proj-1',
     folderName: 'Academic Project',
     title: 'Restaurant Application [Mobile]',
-    date: 'June 2024',
+    date: 'December 2023',
     description: 'Develop a restaurant mobile application that facilitates users to order food.',
     tech: ['PHP', 'Laravel', 'MySQL', 'Flutter'],
     github: '',
