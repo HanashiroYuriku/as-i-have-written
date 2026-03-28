@@ -84,8 +84,8 @@ export default function ExperienceApp() {
             </div>
 
             <div className="mt-8 flex justify-between md:hidden">
-                <button onClick={handlePrev} disabled={currentIndex === 0} className={`flex items-center gap-1 px-3 py-1.5 font-serif text-xs border border-[#c2a878] ${currentIndex === 0 ? 'opacity-30' : 'text-[#8b6b4a]'}`}><ChevronLeft className="w-4 h-4" /> SEBELUMNYA</button>
-                <button onClick={handleNext} disabled={currentIndex === experiences.length - 1} className={`flex items-center gap-1 px-3 py-1.5 font-serif text-xs border border-[#c2a878] ${currentIndex === experiences.length - 1 ? 'opacity-30' : 'text-[#8b6b4a]'}`}>SELANJUTNYA <ChevronRight className="w-4 h-4" /></button>
+                <button onClick={handlePrev} disabled={currentIndex === 0} className={`flex items-center gap-1 px-3 py-1.5 font-serif text-xs border border-[#c2a878] ${currentIndex === 0 ? 'opacity-30' : 'text-[#8b6b4a]'}`}><ChevronLeft className="w-4 h-4" /> NEXT</button>
+                <button onClick={handleNext} disabled={currentIndex === experiences.length - 1} className={`flex items-center gap-1 px-3 py-1.5 font-serif text-xs border border-[#c2a878] ${currentIndex === experiences.length - 1 ? 'opacity-30' : 'text-[#8b6b4a]'}`}>PREV <ChevronRight className="w-4 h-4" /></button>
             </div>
             
             <div className="hidden md:block absolute bottom-8 left-8">
