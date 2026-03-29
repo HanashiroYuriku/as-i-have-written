@@ -1,19 +1,18 @@
-
 export interface TimelineItem {
   date: string;
   content: string;
+  certificateSrc?: string;
+  certificateId?: string;
+  certificateUrl?: string;
 }
 
-/*
-  { 
-    date: "2020 - 2024", 
-    content: "Memulai perjalanan di Universitas Atma Jaya Yogyakarta, mengasah logika di bidang Informatika." 
-  },
-*/
 export const resumeTimeline: TimelineItem[] = [
   { 
     date: "March 2026", 
-    content: "Data Analyst Certification from Udemy. Learned how to analyze data and create visualizations." 
+    content: "Data Analyst Certification from Udemy. Learned how to analyze data and create visualizations.",
+    certificateSrc: "/UC-83c8a9b7-9757-49d8-ad5e-ac4f2f5d7fcf.jpg", 
+    certificateId: "UC-83c8a9b7-9757-49d8-ad5e-ac4f2f5d7fcf",
+    certificateUrl: "https://www.udemy.com/certificate/UC-83c8a9b7-9757-49d8-ad5e-ac4f2f5d7fcf/"        
   },
   { 
     date: "November 2025", 
@@ -21,7 +20,9 @@ export const resumeTimeline: TimelineItem[] = [
   },
   { 
     date: "September 2024 - January 2025", 
-    content: "Backend Developer Intern at Run System. Contributed to building scalable backend services and APIs." 
+    content: "Backend Developer Intern at Run System. Contributed to building scalable backend services and APIs." ,
+    certificateSrc: "/be-intern-sertif.jpg",
+    certificateId: "11417380"
   },
   { 
     date: "July 2024", 
@@ -33,14 +34,20 @@ export const resumeTimeline: TimelineItem[] = [
   },
   { 
     date: "April 2023 - June 2023", 
-    content: "Arena Field Member in the Indonesian SAR Robot Contest. Complete obstacles by creating obstacles." 
+    content: "Arena Field Member in the Indonesian SAR Robot Contest. Complete obstacles by creating obstacles.", 
+    certificateSrc: "/arena-field-sertif.jpg",
+    certificateId: "[-]" 
   },
   { 
     date: "December 2022 - June 2023", 
-    content: "Member of Java Programming Study. Explored the world of Java, from basic syntax to OOP concepts." 
+    content: "Member of Java Programming Study. Explored the world of Java, from basic syntax to OOP concepts.", 
+    certificateSrc: "/java-programming-sertif.jpg",
+    certificateId: "[-]"
   },
   { 
     date: "August 2022 - June 2023", 
-    content: "Member of the UAJY G-09 Robotics. Wrote my first lines of code to move a machine." 
+    content: "Member of the UAJY G-09 Robotics. Wrote my first lines of code to move a machine.", 
+    certificateSrc: "/robotics-sertif.jpg",
+    certificateId: "[-]"
   }
 ];
