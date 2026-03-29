@@ -12,6 +12,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'proj-6',
+    folderName: 'Certification Project',
+    title: 'Data Analyst Certification',
+    date: 'March 2026',
+    description: 'A dashboard that visualizes about Sales Product, Netflix Movies, Electric Vehicle, and Bike Sales. This project is part of the Data Analyst Certification from Udemy.',
+    tech: ['Excel', 'MySQL', 'Power BI', 'Tableau'],
+    github: '',
+    images: ['/projects/data-analyst-1/image-1.jpg', '/projects/data-analyst-1/image-2.jpg', '/projects/data-analyst-1/image-3.jpg', '/projects/data-analyst-1/image-4.jpg', '/projects/data-analyst-1/image-5.png', '/projects/data-analyst-1/image-6.png'],
+  },
+  {
     id: 'proj-5',
     folderName: 'Intern',
     title: 'ERP on Web',
@@ -29,7 +39,7 @@ export const projects: Project[] = [
     description: 'A website to show the beauty of Manggung Hamlet.',
     tech: ['React'],
     github: '',
-    images: ['/manggung-gk-thumbnail.jpg', 'manggung-gk-thumbnail-2.png'],
+    images: ['/projects/manggung-website/manggung-gk-thumbnail.jpg', '/projects/manggung-website/manggung-gk-thumbnail-2.png'],
     liveUrl: 'https://manggunggunungkidul.vercel.app/'
   },
   {
