@@ -141,7 +141,7 @@ export default function ProjectsApp() {
             {/* Sisi Kanan: Visual Data / Gambar */}
             <div className="flex flex-col h-full">
               <div className={`flex items-center gap-2 mb-4 transition-colors duration-300 ${hasImages ? 'opacity-70' : ''}`}>
-                <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${hasImages ? 'bg-cyan-500' : 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]'}`}></div>
+                <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${hasImages ? 'border-cyan-800/60 shadow-[0_0_20px_rgba(8,145,178,0.15)]' : 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]'}`}></div>
                 <span className={`text-[10px] tracking-widest uppercase ${hasImages ? 'text-cyan-400' : 'text-red-400 font-bold'}`}>
                   {hasImages ? 'Visual System' : 'Visual System Error'}
                 </span>
@@ -162,7 +162,7 @@ export default function ProjectsApp() {
                 <div className={`absolute bottom-2 left-2 w-4 h-4 border-b border-l opacity-50 ${hasImages ? 'border-cyan-400' : 'border-red-500'}`}></div>
                 <div className={`absolute bottom-2 right-2 w-4 h-4 border-b border-r opacity-50 ${hasImages ? 'border-cyan-400' : 'border-red-500'}`}></div>
 
-                <div className={`w-full h-full border relative overflow-hidden transition-colors duration-300 flex items-center justify-center p-4 ${hasImages ? 'border-cyan-900/40 bg-[#050b16]' : 'border-red-950/60 bg-red-950/20'}`}>
+                <div className={`w-full h-full border relative overflow-hidden transition-colors duration-300 flex items-center justify-center p-4 ${hasImages ? 'border-cyan-900/40 bg-cyan-950/40' : 'border-red-950/60 bg-red-950/20'}`}>
                   
                   {hasImages ? (
                     <>
@@ -175,7 +175,7 @@ export default function ProjectsApp() {
                           transition={{ duration: 0.3 }}
                           src={activeImage} 
                           alt={`${currentProject.title} visual ${currentImageIndex + 1}`} 
-                          className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 z-10" 
+                          className="absolute inset-0 w-full h-full p-2 md:p-6 object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500 z-10"
                         />
                       </AnimatePresence>
                       
