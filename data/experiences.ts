@@ -25,9 +25,9 @@ export const experiences: Experience[] = [
       "Collaborated with the Frontend team to integrate new features."
     ],
     images: [
-      { src: "/be-intern-sertif.jpg", caption: "Intern Certificate" },
-      { src: "/intern-documentation-1.jpeg", caption: "Intern Documentation" },
-      { src: "/intern-documentation-2.jpeg", caption: "Intern Documentation" }
+      { src: "/certificate/be-intern-sertif.jpg", caption: "Intern Certificate" },
+      { src: "/documentation-image/intern-documentation-1.jpeg", caption: "Intern Documentation" },
+      { src: "/documentation-image/intern-documentation-2.jpeg", caption: "Intern Documentation" }
     ]
   },
   {
@@ -41,7 +41,7 @@ export const experiences: Experience[] = [
       "Developing teamwork and C programming skills."
     ],
     images: [
-      { src: "/lecturer-assistant.jpeg", caption: "Assistant Lecturer" }
+      { src: "/documentation-image/lecturer-assistant.jpeg", caption: "Assistant Lecturer" }
     ]
   },
   {
@@ -53,7 +53,7 @@ export const experiences: Experience[] = [
       "Assemble and develop 3D arenas according to established designs and requirements.",
     ],
     images: [
-      { src: "/arena-field-sertif.jpg", caption: "Certificate" }
+      { src: "/certificate/arena-field-sertif.jpg", caption: "Certificate" }
     ]
   },
   {
@@ -67,7 +67,7 @@ export const experiences: Experience[] = [
       "Develop design skills using NetBeans."
     ],
     images: [
-      { src: "/java-programming-sertif.jpg", caption: "Certificate" }
+      { src: "/certificate/java-programming-sertif.jpg", caption: "Certificate" }
     ]
   },
   {
@@ -79,7 +79,7 @@ export const experiences: Experience[] = [
       "Develop programming skills in C++, Arduino, and electronics.",
     ],
     images: [
-      { src: "/robotics-sertif.jpg", caption: "Certificate" }
+      { src: "/certificate/robotics-sertif.jpg", caption: "Certificate" }
     ]
   },
   {
@@ -91,7 +91,7 @@ export const experiences: Experience[] = [
       "Develop mathematical and logical skills",
     ],
     images: [
-      { src: "/kumon-sertif.jpg", caption: "Certificate" }
+      { src: "/certificate/kumon-sertif.jpg", caption: "Certificate" }
     ]
   }
 ];
