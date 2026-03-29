@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 const greetings = [
-  "Hello World!",     
+  "Hello World!",    
   "Halo Dunia!",      
   "Olá mundo",       
   "Bonjour le monde",
@@ -34,31 +34,39 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
     }
   }, [index, onComplete]);
 
-  // --- LOGIKA WARNA TEKS ---
-  // Berganti setiap 2 kata
   const isPinkText = Math.floor(index / 2) % 2 === 0;
-  const currentTextColor = isPinkText ? "#f498b8" : "#ffffff"; // Pink Cyrene atau Putih
+  const currentTextColor = isPinkText ? "#f498b8" : "#ffffff"; 
 
   return (
     <motion.div
-      // Background KEMBALI GELAP (slate-900) agar mata tidak sakit
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#0f172a]"
+      // KUNCI PERUBAHAN: Tambahkan onClick dan cursor-pointer
+      onClick={onComplete}
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0f172a] cursor-pointer"
       exit={{ opacity: 0, transition: { duration: 1, ease: "easeInOut" } }}
     >
-      <AnimatePresence mode="wait">
-        <motion.h1
-          key={index}
-          initial={{ opacity: 0, y: 10 }}
-          // Hanya warna font yang berubah secara dinamis
-          animate={{ opacity: 1, y: 0, color: currentTextColor }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2 }}
-          // Shadow dibuat tipis agar warnanya tetap stand out di background gelap
-          className="text-2xl md:text-4xl font-mono tracking-widest text-center font-bold drop-shadow-[0_0_15px_currentColor]"
-        >
-          {greetings[index]}
-        </motion.h1>
-      </AnimatePresence>
+      <div className="flex-1 flex items-center justify-center">
+        <AnimatePresence mode="wait">
+          <motion.h1
+            key={index}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0, color: currentTextColor }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="text-2xl md:text-4xl font-mono tracking-widest text-center font-bold drop-shadow-[0_0_15px_currentColor]"
+          >
+            {greetings[index]}
+          </motion.h1>
+        </AnimatePresence>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="absolute bottom-20 md:bottom-24 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] md:text-xs text-slate-500 uppercase tracking-[0.2em] animate-pulse"
+      >
+        [ Click anywhere to bypass ]
+      </motion.div>
     </motion.div>
   );
 }

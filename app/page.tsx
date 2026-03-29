@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Preloader from '@/components/Preloader';
 import DesktopMenu from '@/components/DesktopMenu';
@@ -54,6 +54,20 @@ const HologramGlitchOverlay = () => {
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [activeApp, setActiveApp] = useState<string | null>(null);
+  const [isChecking, setIsChecking] = useState(true);
+
+  useEffect(() => {
+    const hasSeenIntro = sessionStorage.getItem('hasSeenIntro');
+    if (hasSeenIntro) {
+      setIsLoading(false); 
+    }
+    setIsChecking(false);
+  }, []);
+
+  const handlePreloaderComplete = () => {
+    sessionStorage.setItem('hasSeenIntro', 'true');
+    setIsLoading(false);
+  };
 
   const getAppTitle = (id: string) => {
     switch (id) {
@@ -66,13 +80,17 @@ export default function Home() {
     }
   };
 
+  if (isChecking) {
+    return <main className="w-full h-screen bg-slate-900"></main>;
+  }
+
   return (
     <main className="relative w- h-screen overflow-hidden bg-slate-900 text-slate-100 font-sans select-none">
       
       {/* PRELOADER ANIMATION */}
       <AnimatePresence>
         {isLoading && (
-          <Preloader onComplete={() => setIsLoading(false)} />
+          <Preloader onComplete={handlePreloaderComplete} />
         )}
       </AnimatePresence>
 
