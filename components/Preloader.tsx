@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 const greetings = [
-  "Hello World !",     
-  "Halo Dunia !",      
+  "Hello World!",     
+  "Halo Dunia!",      
   "Olá mundo",       
   "Bonjour le monde",
   "こんにちは世界",    
