@@ -23,11 +23,11 @@ export default function ResumeApp() {
 
         {/* Tombol Download Group */}
         <div className="md:absolute md:right-10 flex flex-row w-full md:w-auto justify-center md:justify-end gap-3 mt-1 md:mt-0">
-          <a href="/CV_ID.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-[#c2a878] text-[#f8f4e6] rounded-full shadow-md hover:bg-[#8b6b4a] transition-all group border border-[#ece5d3]">
+          <a href="/cv/CV_ID.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-[#c2a878] text-[#f8f4e6] rounded-full shadow-md hover:bg-[#8b6b4a] transition-all group border border-[#ece5d3]">
             <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
             <span className="text-xs md:text-sm font-bold tracking-widest uppercase">CV [ID]</span>
           </a>
-          <a href="/CV_EN.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-[#8b6b4a] text-[#f8f4e6] rounded-full shadow-md hover:bg-[#c2a878] transition-all group border border-[#ece5d3]">
+          <a href="/cv/CV_EN.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-[#8b6b4a] text-[#f8f4e6] rounded-full shadow-md hover:bg-[#c2a878] transition-all group border border-[#ece5d3]">
             <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
             <span className="text-xs md:text-sm font-bold tracking-widest uppercase">CV [EN]</span>
           </a>
