@@ -155,7 +155,7 @@ export default function Home() {
           </div>
 
           {/* widget controls */}
-          <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center md:justify-end items-end p-4 pb-2 md:p-8 pointer-events-none">
+          <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center md:justify-end items-end p-4 pb-3 md:p-8 pointer-events-none">
             
             <div className="flex items-center gap-1 md:gap-0 pointer-events-auto w-full max-w-100 md:max-w-[320px]">
               
