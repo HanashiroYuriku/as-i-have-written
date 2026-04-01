@@ -13,6 +13,8 @@ import ResumeApp from '@/components/ResumeApp';
 import ContactApp from '@/components/ContactApp';
 import EpilogueText from '@/components/EpilogueText';
 import HeroHeader from '@/components/HeroHeader';
+import MusicPlayer from '@/components/MusicPlayer';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const HologramGlitchOverlay = () => {
   return (
@@ -55,6 +57,34 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [activeApp, setActiveApp] = useState<string | null>(null);
   const [isChecking, setIsChecking] = useState(true);
+
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 40; //sensitivitas
+
+    if (distance > minSwipeDistance && activeWidget === 0) {
+      setActiveWidget(1); 
+    } else if (distance < -minSwipeDistance && activeWidget === 1) {
+      setActiveWidget(0); 
+    }
+  };
+
+  // 
+  const [activeWidget, setActiveWidget] = useState(0); 
+  // 
 
   useEffect(() => {
     const hasSeenIntro = sessionStorage.getItem('hasSeenIntro');
@@ -114,8 +144,8 @@ export default function Home() {
             <DesktopMenu onOpenApp={(id) => setActiveApp(id)} />
           </div>
 
-          {/* --- Teks Epilog & Jam --- */}
-          <div className="absolute bottom-20 md:bottom-10 left-1/2 -translate-x-1/2 z-20 w-[95%] md:w-auto pointer-events-none flex justify-center">
+          {/* --- Teks Epilog --- */}
+          <div className="absolute bottom-22 md:bottom-10 left-1/2 -translate-x-1/2 z-20 w-[95%] md:w-auto pointer-events-none flex justify-center">
              <motion.div
                animate={{ opacity: [1, 0.8, 1, 1, 0.9, 1] }}
                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
@@ -124,10 +154,57 @@ export default function Home() {
              </motion.div>
           </div>
 
-          {/* Jam */}
-          <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center md:justify-end items-end p-6 md:p-8 pointer-events-none">
-            <div className="flex items-center gap-4 text-xs md:text-sm tracking-widest pointer-events-auto bg-slate-900/60 px-5 py-2.5 rounded-sm border border-slate-700/50 backdrop-blur-md shadow-lg transition-all hover:bg-slate-800/80 hover:border-slate-500/50">
-              <RealTimeClock />
+          {/* widget controls */}
+          <div className="absolute bottom-0 left-0 right-0 z-20 flex justify-center md:justify-end items-end p-4 pb-2 md:p-8 pointer-events-none">
+            
+            <div className="flex items-center gap-1 md:gap-0 pointer-events-auto w-full max-w-100 md:max-w-[320px]">
+              
+              {/* left button */}
+              <button 
+                onClick={() => setActiveWidget(0)} 
+                className={`md:hidden p-1 transition-all duration-300 shrink-0 ${
+                  activeWidget === 1 ? 'text-slate-400 hover:text-cyan-400 opacity-100 cursor-pointer' : 'text-transparent opacity-0 pointer-events-none'
+                }`}
+              >
+                <ChevronLeft className="w-7 h-7" />
+              </button>
+
+              <div 
+                className="flex-1 md:flex-auto overflow-hidden md:overflow-visible h-14 md:h-auto rounded-sm md:rounded-none relative md:w-full"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+              >
+                
+                <div 
+                  className={`flex md:flex-col h-full md:h-auto w-[200%] md:w-full md:gap-2 transition-transform duration-300 ease-in-out ${
+                    activeWidget === 1 ? '-translate-x-1/2 md:translate-x-0' : 'translate-x-0'
+                  }`}
+                >
+                  
+                  {/* jam */}
+                  <div className="w-1/2 md:w-full h-full md:h-auto flex items-center justify-center gap-4 text-xs md:text-sm tracking-widest bg-slate-900/60 px-5 md:py-2.5 rounded-sm border border-cyan-800/50 backdrop-blur-md shadow-[0_0_15px_rgba(8,145,178,0.2)] transition-all hover:bg-slate-800/80 hover:border-slate-500/50 md:order-2">
+                    <RealTimeClock />
+                  </div>
+
+                  {/* music */}
+                  <div className="w-1/2 md:w-full h-full md:h-auto [&>div]:h-full! md:[&>div]:h-auto! md:order-1">
+                    <MusicPlayer />
+                  </div>
+
+                </div>
+              </div>
+
+              {/* right button */}
+              <button 
+                onClick={() => setActiveWidget(1)} 
+                className={`md:hidden p-1 transition-all duration-300 shrink-0 ${
+                  activeWidget === 0 ? 'text-slate-400 hover:text-cyan-400 opacity-100 cursor-pointer' : 'text-transparent opacity-0 pointer-events-none'
+                }`}
+              >
+                <ChevronRight className="w-7 h-7" />
+              </button>
+
             </div>
           </div>
 
@@ -147,7 +224,7 @@ export default function Home() {
                 {!['profile', 'experience', 'projects', 'resume', 'contact'].includes(activeApp || '') && (
                   <div className="flex items-center justify-center w-full h-full p-8 text-center bg-slate-950">
                     <h3 className="text-2xl text-slate-400 font-mono">
-                      Konten untuk <span className="text-indigo-400">{activeApp}</span> sedang dibangun...
+                      Content <span className="text-indigo-400">{activeApp}</span> still booting...
                     </h3>
                   </div>
                 )}
