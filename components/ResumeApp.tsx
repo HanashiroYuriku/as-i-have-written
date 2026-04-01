@@ -63,7 +63,7 @@ export default function ResumeApp() {
                 transition={{ delay: index * 0.2 }}
                 className="relative bg-[#f8f4e6]/95 border border-[#c2a878]/50 p-5 md:p-6 rounded-sm shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="absolute -top-2.5 left-8 md:top-1/2 md:-left-2.5 md:-translate-y-1/2 w-0 h-0 border-b-10 border-b-[#f8f4e6] md:border-b-transparent md:border-r-10 md:border-r-[#f8f4e6] border-x-[10px] md:border-x-transparent md:border-y-[10px] md:border-y-transparent border-x-transparent"></div>
+                <div className="absolute -top-2.5 left-8 md:top-1/2 md:-left-2.5 md:-translate-y-1/2 w-0 h-0 border-b-10 border-b-[#f8f4e6] md:border-b-transparent md:border-r-10 md:border-r-[#f8f4e6] border-x-10 md:border-x-transparent md:border-y-10 md:border-y-transparent border-x-transparent"></div>
                 
                 <div className="flex justify-between items-start mb-2">
                   <p className="text-[#8b6b4a] text-[10px] md:text-xs font-bold tracking-widest uppercase flex items-center gap-2">
