@@ -73,7 +73,7 @@ export default function ProfileApp() {
         </div>
 
         {/* Ornamen Bawah */}
-        <div className="absolute bottom-12 w-1/2 h-1 border-t border-b border-[#c2a878] opacity-60"></div>
+        <div className="md:hidden absolute bottom-12 w-1/2 h-1 border-t border-b border-[#c2a878] opacity-60"></div>
       </motion.div>
 
     </div>
