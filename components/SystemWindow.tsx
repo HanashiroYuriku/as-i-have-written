@@ -11,8 +11,7 @@ interface SystemWindowProps {
 
 export default function SystemWindow({ title, onClose, children }: SystemWindowProps) {
   return (
-    // --- 1. OVERLAY (Layar Belakang Gelap) ---
-    // Harus 'fixed inset-0' agar menutupi seluruh layar
+    // --- 1. OVERLAY ---
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -21,7 +20,6 @@ export default function SystemWindow({ title, onClose, children }: SystemWindowP
     >
       
       {/* --- 2. KONTAINER JENDELA UTAMA --- */}
-      {/* Di sini kita terapkan proporsi baru: max-w-[90vw] dan max-h-[90vh] */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 10 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
