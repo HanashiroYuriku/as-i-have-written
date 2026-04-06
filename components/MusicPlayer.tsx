@@ -116,6 +116,8 @@ export default function MusicPlayer() {
           onPlay={() => {
             setIsPlaying(true);
             if (videoRef.current) {
+              videoRef.current.currentTime = audioRef.current?.currentTime || 0;
+              
               const playPromise = videoRef.current.play();
               if (playPromise !== undefined) playPromise.catch(() => {});
             }
