@@ -16,8 +16,6 @@ export default function ProfileApp() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="flex-1 p-8 md:p-12 flex flex-col justify-center relative border-b-2 md:border-b-0 md:border-r-2 border-[#d3c5af]/50"
       >
-        {/* Ornamen Atas */}
-        <div className="w-full h-1 border-t border-b border-[#c2a878] mb-8 opacity-60"></div>
 
         <h3 className="text-lg md:text-xl font-serif text-[#8b6b4a] mb-2 tracking-widest uppercase">Hi, I'm</h3>
         <h1 className="text-3xl md:text-5xl font-bold font-serif leading-tight text-[#3d2e25] mb-6">
@@ -33,6 +31,8 @@ export default function ProfileApp() {
 
         {/* Tech Stack Badges */}
         <div className="mt-auto">
+          {/* Ornamen Atas */}
+          <div className="w-full h-1 border-t border-b border-[#c2a878] mb-8 opacity-60"></div>
           <p className="text-xs uppercase tracking-widest text-[#8b6b4a] mb-3 font-bold border-b border-[#c2a878]/30 pb-1 inline-block">Tech Arsenal</p>
           <div className="flex flex-wrap gap-2">
             {['Golang', 'Laravel', 'Next.js', 'PHP', 'TypeScript', 'MySQL', 'PostgreSQL', 'Redis', 'PowerBI', 'Tableau'].map((tech) => (
