@@ -31,7 +31,7 @@ export default function EpilogueText() {
   }, [index]);
 
   return (
-    <div className="pointer-events-auto flex justify-center w-full px-4 md:px-12">
+    <div className="pointer-events-auto flex justify-center w-full px-4 lg:px-12">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -39,13 +39,13 @@ export default function EpilogueText() {
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="flex flex-col items-center justify-center gap-2 md:gap-3 text-center max-w-3xl"
+          className="flex flex-col items-center justify-center gap-2 lg:gap-3 text-center max-w-3xl"
         >
-          <span className="text-indigo-50 font-serif italic text-xs md:text-sm lg:text-base drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] leading-tight md:leading-relaxed">
+          <span className="text-indigo-50 font-serif italic text-xs lg:text-sm xl:text-base drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] leading-tight lg:leading-relaxed">
             "{epilogues[index].text}"
           </span>
           
-          <span className="text-indigo-400 font-mono tracking-widest text-[10px] md:text-xs uppercase drop-shadow-[0_0_5px_rgba(99,102,241,0.8)] mt-1">
+          <span className="text-indigo-400 font-mono tracking-widest text-[10px] lg:text-xs uppercase drop-shadow-[0_0_5px_rgba(99,102,241,0.8)] mt-1">
             ~ {epilogues[index].character}
           </span>
         </motion.div>
