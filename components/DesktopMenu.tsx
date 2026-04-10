@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import { User, Compass, FolderKanban, FileText, Mail } from 'lucide-react';
+import { User, Compass, FolderKanban, FileText, Mail, Monitor } from 'lucide-react';
 
 const apps = [
   { id: 'profile', name: 'Dionisius.exe', icon: User },
@@ -9,6 +9,7 @@ const apps = [
   { id: 'projects', name: 'Projects.wav', icon: FolderKanban },
   { id: 'resume', name: 'Resume.exe', icon: FileText },
   { id: 'contact', name: 'Transmission.exe', icon: Mail },
+  { id: 'wallpaper', name: 'Display.exe', icon: Monitor }
 ];
 
 // staggered animation
