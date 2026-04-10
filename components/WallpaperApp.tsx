@@ -46,7 +46,7 @@ export default function WallpaperApp() {
         </div>
         {/* ------------------------------------------------------------- */}
 
-        <h2 className="font-serif text-2xl md:text-3xl text-slate-100 tracking-widest uppercase mb-6 md:mb-8 text-center px-4">
+        <h2 className="font-mono text-2xl md:text-3xl text-slate-100 tracking-widest uppercase mb-6 md:mb-8 text-center px-4">
           Display Settings
         </h2>
         
@@ -75,7 +75,6 @@ export default function WallpaperApp() {
           <div
             key={wp.id}
             onClick={() => setActiveWallpaper(wp.src)}
-            // Changed from button to div, added cursor-pointer
             className={`relative aspect-video rounded-sm overflow-hidden border-2 cursor-pointer group transition-all duration-300 ${activeWallpaper === wp.src && isWallpaperEnabled ? 'border-cyan-400 scale-105 shadow-[0_0_15px_rgba(34,211,238,0.5)]' : 'border-slate-700 hover:border-slate-400'}`}
           >
             <Image 
