@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Play, Pause, SkipForward, Disc } from 'lucide-react';
 import { playlist } from '@/data/song';
+import { useWallpaper } from '@/context/WallpaperContext';
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -13,9 +14,21 @@ export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null); 
 
+  const { setIsVideoPlaying } = useWallpaper();
+
   useEffect(() => {
     setPortalNode(document.getElementById('video-portal'));
   }, []);
+
+  /**
+   * Syncs video playing state with the global wallpaper context.
+   * Disables wallpaper if a song with an associated video is currently playing.
+   */
+  useEffect(() => {
+    const currentSongHasVideo = !!playlist[currentSongIndex].video;
+    setIsVideoPlaying(isPlaying && currentSongHasVideo);
+  }, [isPlaying, currentSongIndex, setIsVideoPlaying]);
+  // -------------------------------------
 
   const togglePlay = () => {
     if (audioRef.current) {
