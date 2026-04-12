@@ -12,9 +12,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'proj-7',
+    folderName: 'Personal Project',
+    title: 'Ayaka [BE GO Template]',
+    date: 'April 2026',
+    description: 'A Golang (Go) Backend API template designed with Clean Architecture. This project focuses on scalability, security, and seamless team collaboration.',
+    tech: ['Golang', 'PostgreSQL'],
+    github: 'https://github.com/HanashiroYuriku/be-ayaka',
+    images: [],
+  },
+  {
     id: 'proj-6',
-    folderName: 'Certification Project',
-    title: 'Data Analyst Certification',
+    folderName: 'Training Project',
+    title: 'Data Analyst Training',
     date: 'March 2026',
     description: 'A dashboard that visualizes about Sales Product, Netflix Movies, Electric Vehicle, and Bike Sales. This project is part of the Data Analyst Certification from Udemy.',
     tech: ['Excel', 'MySQL', 'Power BI', 'Tableau'],
