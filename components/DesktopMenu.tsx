@@ -7,7 +7,7 @@ const apps = [
   { id: 'profile', name: 'Dionisius.exe', icon: User },
   { id: 'experience', name: "Chronicles.exe", icon: Compass },
   { id: 'projects', name: 'Projects.wav', icon: FolderKanban },
-  { id: 'resume', name: 'Resume.exe', icon: FileText },
+  { id: 'resume', name: 'CV-Resume.exe', icon: FileText },
   { id: 'contact', name: 'Transmission.exe', icon: Mail },
   { id: 'wallpaper', name: 'Display.exe', icon: Monitor }
 ];
