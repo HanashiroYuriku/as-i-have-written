@@ -79,7 +79,7 @@ export default function ResumeApp() {
                         url: item.certificateUrl 
                       })}
                       className="flex items-center gap-1.5 p-1.5 md:px-2.5 md:py-1 bg-[#c2a878]/10 hover:bg-[#c2a878] text-[#8b6b4a] hover:text-[#f8f4e6] border border-[#c2a878]/40 rounded-sm transition-colors group cursor-pointer"
-                      title="Lihat Sertifikat"
+                      title="Check Sertifikat"
                     >
                       <Award className="w-3.5 h-3.5 group-hover:scale-110 transition-transform shrink-0" />
                       <span className="hidden md:block text-[10px] font-bold tracking-wider uppercase">Certificate</span>
