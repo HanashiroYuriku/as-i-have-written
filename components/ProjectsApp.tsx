@@ -126,7 +126,7 @@ export default function ProjectsApp() {
                 {currentProject.github ? (
                   <a href={currentProject.github} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-cyan-900/30 hover:bg-cyan-600/30 border border-cyan-600 hover:border-cyan-300 text-cyan-100 transition-all duration-300 group w-fit">
                     <GithubIcon />
-                    <span className="text-xs tracking-wider uppercase">Lihat Repositori</span>
+                    <span className="text-xs tracking-wider uppercase">Go to Repositori</span>
                     <ExternalLink className="w-3 h-3 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                   </a>
                 ) : (
