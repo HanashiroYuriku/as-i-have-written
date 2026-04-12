@@ -13,7 +13,7 @@ Crafted by **Dionisius Geovanni Caesario** | **Hanashiro Yuriku**
 * **Dionisius.exe (Profile):** A self-introduction module featuring glowing tech arsenal badges and interactive photo transitions.
 * **Chronicles.exe (Experience):** An interactive career journey logbook utilizing a reverse chronological navigation concept (Chapter system) wrapped in a classic vintage dossier aesthetic.
 * **Projects.wav (Portfolio):** An archive of technical deployments and data analysis records, featuring immersive UI elements, detailed project logs, and direct source attribution.
-* **Resume.exe (Track Record):** A historical track record accompanied by the animation of the assistant, *Mem*, complete with a Fast-Track CV Download button for quick recruiter access.
+* **CV-Resume.exe (Track Record):** A historical track record accompanied by the animation of the assistant, *Mem*, complete with a Fast-Track CV Download button for quick recruiter access.
 * **Transmission.exe (Contact):** A dark-mode, terminal-style communication interface for various professional and creator network protocols.
 * **Epilogue Quotes:** A dynamic closing quotes module displaying lines from various cosmos observers.
 * **Under the Hood (Performance Optimization):** Engineered with Next.js `next/dynamic` for aggressive lazy loading and code splitting, coupled with `next/image` for automatic 4K asset compression and anti-aliasing to ensure buttery-smooth performance.
