@@ -36,10 +36,10 @@ export const socials: SocialMedia[] = [
   { icon: GithubIcon, label: 'GitHub', value: 'Hanashiro Yuriku', link: 'https://github.com/HanashiroYuriku' },
   { icon: Mail, label: 'Email', value: 'dionisiuscaesario@gmail.com', link: 'mailto:dionisiuscaesario@gmail.com' },
   { icon: Phone, label: 'WhatsApp', value: '+62 856 8000 747', link: 'https://wa.me/628568000747' },
+  { icon: LineIcon, label: 'Line ID', value: 'Dionisius Geovanni', link: 'https://line.me/ti/p/~x_g_c_d_c_g_x' },
   { icon: InstagramIcon, label: 'Instagram', value: '@d.geovannicaesario', link: 'https://instagram.com/d.geovannicaesario' },
   { icon: InstagramIcon, label: 'Instagram', value: '@hanashiroyuriku', link: 'https://instagram.com/hanashiroyuriku' },
   { icon: TiktokIcon, label: 'TikTok', value: 'Hanashiro Yuriku', link: 'https://tiktok.com/@hanashiroyuriku' },
-  { icon: LineIcon, label: 'Line ID', value: 'Dionisius Geovanni', link: 'https://line.me/ti/p/~x_g_c_d_c_g_x' },
   { icon: DiscordIcon, label: 'Discord', value: 'Hanashiro Yuriku', link: 'https://discord.com/users/hanashiroyuriku' },
-  { icon: BeRealIcon, label: 'BeReal', value: 'Riku', link: 'https://bere.al/hanashiroyuriku' },
+  { icon: BeRealIcon, label: 'BeReal', value: 'Evan', link: 'https://bere.al/geovannicaesario' },
 ];
