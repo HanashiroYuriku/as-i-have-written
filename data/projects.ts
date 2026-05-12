@@ -8,18 +8,73 @@ export interface Project {
   github: string;
   images: string[];
   liveUrl?: string;
+  status?: 'Ongoing' | 'Finished' | 'Maintained';
+  license?: string;
+  features?: string[];
 }
 
 export const projects: Project[] = [
+  {
+    id: 'proj-9',
+    folderName: 'Personal Project',
+    title: 'Robin [Lyrics Player TUI]',
+    date: 'May 2026',
+    description: 'A sophisticated Terminal User Interface (TUI) application that renders song lyrics with a synchronized typewriter effect. Built with a strict separation of concerns to ensure clean code and robust terminal state management.',
+    tech: ['Golang', 'Bubble Tea', 'Lipgloss'],
+    github: 'https://github.com/HanashiroYuriku/robin',
+    images: [],
+    status: 'Finished',
+    license: 'MIT License',
+    features: [
+      'Model-View-Update (MVU)',
+      'Repository Pattern',
+      'Synchronized Rendering Engine',
+      'Data-Driven Configuration',
+      'Separation of Concerns'
+    ]
+  },
+  {
+    id: 'proj-8',
+    folderName: 'Personal Project',
+    title: 'Furina [RESTful API]',
+    date: 'April 2026',
+    description: '"Built on top of the Ayaka Clean Architecture template. A scalable RESTful API service designed to calculate Genshin Impact character ascensions, track weapon upgrades, and manage daily farming schedules efficiently.',
+    tech: ['Golang', 'PostgreSQL', 'Fiber'],
+    github: 'https://github.com/HanashiroYuriku/furina',
+    images: [],
+    status: 'Ongoing',
+    features: ['RESTful Design', 
+      'Time-based Schedule Tracker', 
+      'Resource Calculation Engine', 
+      'Inventory Management',
+      'Automated Farming Roadmap'
+    ]
+  },
   {
     id: 'proj-7',
     folderName: 'Personal Project',
     title: 'Ayaka [BE GO Template]',
     date: 'April 2026',
     description: 'A Golang (Go) Backend API template designed with Clean Architecture. This project focuses on scalability, security, and seamless team collaboration.',
-    tech: ['Golang', 'PostgreSQL'],
-    github: 'https://github.com/HanashiroYuriku/be-ayaka',
+    tech: ['Golang', 'PostgreSQL', 'Testify', 'JWT', 'Fiber', 'SMTP'],
+    github: 'https://github.com/HanashiroYuriku/ayaka',
     images: [],
+    status: 'Maintained',
+    license: "MIT License",
+    features: ['Hexagonal Architecture', 
+      'GORM', 'Custom Validator', 
+      'SMTP Integration', 
+      'Global Error Handler', 
+      'JWT Authentication', 
+      'RBAC', 
+      'Transaction Manager', 
+      'Swagger', 
+      'Structured Logging', 
+      'Standardized API Response', 
+      'Bcrypt Hashing',
+      'Unit Testing with Mocking',
+      'Docker'
+    ]
   },
   {
     id: 'proj-6',
