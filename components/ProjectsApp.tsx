@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Folder, ExternalLink, TerminalSquare, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Folder, ExternalLink, TerminalSquare, ChevronLeft, ChevronRight, ShieldCheck } from 'lucide-react';
 import { projects } from '@/data/projects';
 
 const GithubIcon = () => (
@@ -87,8 +87,30 @@ export default function ProjectsApp() {
           >
             {/* Sisi Kiri: Informasi Teknis */}
             <div className="flex flex-col h-full">
-              <div className="bg-cyan-500/20 px-4 py-2 border-l-4 border-cyan-400 inline-flex w-fit mb-4 shadow-[0_0_15px_rgba(34,211,238,0.15)]">
-                <span className="text-cyan-100 text-xs tracking-widest uppercase font-bold">{currentProject.folderName}</span>
+              <div className="flex flex-wrap gap-3 mb-4">
+                <div className="bg-cyan-500/20 px-4 py-2 border-l-4 border-cyan-400 inline-flex w-fit shadow-[0_0_15px_rgba(34,211,238,0.15)]">
+                  <span className="text-cyan-100 text-xs tracking-widest uppercase font-bold">{currentProject.folderName}</span>
+                </div>
+
+                {/* project status */}
+                {currentProject.status && (
+                  <div className={`px-4 py-2 border-l-4 inline-flex w-fit shadow-sm ${
+                    currentProject.status === 'Ongoing' 
+                      ? 'bg-amber-500/20 border-amber-400 text-amber-200 shadow-[0_0_15px_rgba(251,191,36,0.15)]' 
+                      : currentProject.status === 'Finished'
+                      ? 'bg-emerald-500/20 border-emerald-400 text-emerald-200 shadow-[0_0_15px_rgba(52,211,153,0.15)]'
+                      : 'bg-purple-500/20 border-purple-400 text-purple-200 shadow-[0_0_15px_rgba(168,85,247,0.15)]'
+                  }`}>
+                    <span className="text-xs tracking-widest uppercase font-bold">{currentProject.status}</span>
+                  </div>
+                )}
+
+                {/* --- Badge License --- */}
+                {currentProject.license && (
+                  <div className="bg-slate-500/20 px-4 py-2 border-l-4 border-slate-400 inline-flex w-fit text-slate-200 shadow-[0_0_15px_rgba(100,116,139,0.15)]">
+                    <span className="text-xs tracking-widest uppercase font-bold">{currentProject.license}</span>
+                  </div>
+                )}
               </div>
 
               <div className="flex-1 border border-cyan-900/50 bg-[#080f1c] p-6 relative flex flex-col">
@@ -114,6 +136,25 @@ export default function ProjectsApp() {
                 <p className="text-xs md:text-sm text-cyan-200/70 leading-relaxed mb-6">
                   {currentProject.description}
                 </p>
+
+                {currentProject.features && currentProject.features.length > 0 && (
+                  <div className="mb-6">
+                    <div className="flex items-center gap-2 text-[10px] text-indigo-400 uppercase tracking-[0.2em] mb-2 font-bold opacity-80">
+                      <ShieldCheck className="w-3 h-3" />
+                      Core Specifications
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {currentProject.features.map((feat) => (
+                        <span 
+                          key={feat} 
+                          className="text-[9px] px-2 py-0.5 border border-indigo-500/30 bg-indigo-500/5 text-indigo-200/80 rounded-sm italic shadow-[inset_0_0_5px_rgba(99,102,241,0.1)]"
+                        >
+                          {feat}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {currentProject.tech.map((t) => (
