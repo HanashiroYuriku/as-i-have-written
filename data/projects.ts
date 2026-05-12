@@ -38,7 +38,7 @@ export const projects: Project[] = [
     folderName: 'Personal Project',
     title: 'Furina [RESTful API]',
     date: 'April 2026',
-    description: '"Built on top of the Ayaka Clean Architecture template. A scalable RESTful API service designed to calculate Genshin Impact character ascensions, track weapon upgrades, and manage daily farming schedules efficiently.',
+    description: 'Built on top of the Ayaka Clean Architecture template. A scalable RESTful API service designed to calculate Genshin Impact character ascensions, track weapon upgrades, and manage daily farming schedules efficiently.',
     tech: ['Golang', 'PostgreSQL', 'Fiber'],
     github: 'https://github.com/HanashiroYuriku/furina',
     images: [],
