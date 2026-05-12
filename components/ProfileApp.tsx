@@ -2,6 +2,19 @@
 
 import { motion } from 'framer-motion';
 
+const techStack = [
+  { name: 'Golang', isCore: true },
+  { name: 'MySQL', isCore: true },
+  { name: 'PostgreSQL', isCore: true },
+  { name: 'Redis', isCore: true },
+  { name: 'Next.js', isCore: true },
+  { name: 'Laravel', isCore: false },
+  { name: 'PHP', isCore: false },
+  { name: 'TypeScript', isCore: false },
+  { name: 'PowerBI', isCore: false },
+  { name: 'Tableau', isCore: false },
+];
+
 export default function ProfileApp() {
   return (
     // container
@@ -35,12 +48,18 @@ export default function ProfileApp() {
           <div className="w-full h-1 border-t border-b border-[#c2a878] mb-8 opacity-60"></div>
           <p className="text-xs uppercase tracking-widest text-[#8b6b4a] mb-3 font-bold border-b border-[#c2a878]/30 pb-1 inline-block">Tech Arsenal</p>
           <div className="flex flex-wrap gap-2">
-            {['Golang', 'Laravel', 'Next.js', 'PHP', 'TypeScript', 'MySQL', 'PostgreSQL', 'Redis', 'PowerBI', 'Tableau'].map((tech) => (
+            {techStack.map((tech) => (
               <span 
-                key={tech} 
-                className="px-3 py-1.5 bg-[#dfd6c1] border border-[#c2a878]/50 rounded-full text-xs font-bold text-[#5c4b3f] shadow-sm transition-all duration-300 hover:border-[#c2a878] hover:shadow-[0_0_10px_#c2a878] hover:-translate-y-0.5 cursor-default"
+                key={tech.name} 
+                className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all duration-300 cursor-default shadow-sm
+                  ${tech.isCore 
+                    ? 'bg-[#e4c58d] border-2 border-[#e9b580] text-[#3d2e25] shadow-[0_0_15px_rgba(194,168,120,0.4)] -translate-y-0.5 scale-105' 
+                    : 'bg-[#dfd6c1] border border-[#c2a878]/50 text-[#5c4b3f] hover:border-[#c2a878]'
+                  }
+                `}
               >
-                {tech}
+                {tech.name}
+
               </span>
             ))}
           </div>
