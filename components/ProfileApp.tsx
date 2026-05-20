@@ -7,6 +7,7 @@ const techStack = [
   { name: 'MySQL', isCore: true },
   { name: 'PostgreSQL', isCore: true },
   { name: 'Redis', isCore: true },
+  { name: 'Docker', isCore: true },
   { name: 'Next.js', isCore: true },
   { name: 'Laravel', isCore: false },
   { name: 'PHP', isCore: false },
