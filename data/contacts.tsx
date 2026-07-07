@@ -41,5 +41,5 @@ export const socials: SocialMedia[] = [
   { icon: InstagramIcon, label: 'Instagram', value: '@hanashiroyuriku', link: 'https://instagram.com/hanashiroyuriku' },
   { icon: TiktokIcon, label: 'TikTok', value: 'Hanashiro Yuriku', link: 'https://tiktok.com/@hanashiroyuriku' },
   { icon: DiscordIcon, label: 'Discord', value: 'Hanashiro Yuriku', link: 'https://discord.com/users/hanashiroyuriku' },
-  { icon: BeRealIcon, label: 'BeReal', value: 'Evan', link: 'https://bere.al/geovannicaesario' },
+  { icon: BeRealIcon, label: 'BeReal', value: 'Acubens Epun', link: 'https://bere.al/d.geovannicaesario' },
 ];
