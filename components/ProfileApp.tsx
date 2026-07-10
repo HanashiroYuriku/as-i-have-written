@@ -85,7 +85,7 @@ export default function ProfileApp() {
             <span className="font-serif text-[#8b6b4a] tracking-widest z-0">FOTO PROFIL</span>
             
             <img 
-              src="/profile-pict.jpeg" 
+              src="/profile-pict-ayaka.jpeg" 
               alt="Dionisius Geovanni" 
               className="absolute inset-0 z-10 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
             />
