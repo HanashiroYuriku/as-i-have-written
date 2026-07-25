@@ -23,7 +23,7 @@ export const projects: Project[] = [
     tech: ['.NET', 'C#', 'MediatR', 'Pomelo'],
     github: 'https://github.com/HanashiroYuriku/Columbina',
     images: [],
-    status: 'Maintained',
+    status: 'Ongoing',
     license: 'MIT License',
     features: [
       'Custom Validator', 
