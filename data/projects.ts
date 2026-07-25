@@ -15,6 +15,31 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'proj-10',
+    folderName: 'Personal Project',
+    title: 'Columbina [BE .NET Template]',
+    date: 'July 2026',
+    description: 'A .NET (C#) Backend API template designed with Clean Architecture, CQRS (Command Query Responsability Segregation), and Vertical Slice Architecture. This project focuses on scalability, security, and seamless team collaboration.',
+    tech: ['.NET', 'C#', 'MediatR', 'Pomelo'],
+    github: 'https://github.com/HanashiroYuriku/Columbina',
+    images: [],
+    status: 'Maintained',
+    license: 'MIT License',
+    features: [
+      'Custom Validator', 
+      'Global Error Handler', 
+      'JWT Authentication', 
+      'RBAC', 
+      'Transaction Manager', 
+      'Swagger', 
+      'Structured Logging', 
+      'Standardized API Response', 
+      'Bcrypt Hashing',
+      'Unit Testing with Mocking',
+      'Docker'
+    ]
+  },
+  {
     id: 'proj-9',
     folderName: 'Personal Project',
     title: 'Robin [Lyrics Player TUI]',
