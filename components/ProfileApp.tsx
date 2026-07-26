@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 
 const techStack = [
   { name: 'Golang', isCore: true },
+  { name: 'C#', isCore: true },
+  { name: '.NET', isCore: true },
   { name: 'MySQL', isCore: true },
   { name: 'PostgreSQL', isCore: true },
   { name: 'Redis', isCore: true },
