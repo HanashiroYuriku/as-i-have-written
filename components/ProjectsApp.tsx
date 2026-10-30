@@ -99,6 +99,8 @@ export default function ProjectsApp() {
                       ? 'bg-amber-500/20 border-amber-400 text-amber-200 shadow-[0_0_15px_rgba(251,191,36,0.15)]' 
                       : currentProject.status === 'Finished'
                       ? 'bg-emerald-500/20 border-emerald-400 text-emerald-200 shadow-[0_0_15px_rgba(52,211,153,0.15)]'
+                      : currentProject.status === 'On Hold'
+                      ?'bg-slate-500/20 border-slate-400 text-slate-300 shadow-[0_0_15px_rgba(148,163,184,0.15)]'
                       : 'bg-purple-500/20 border-purple-400 text-purple-200 shadow-[0_0_15px_rgba(168,85,247,0.15)]'
                   }`}>
                     <span className="text-xs tracking-widest uppercase font-bold">{currentProject.status}</span>

@@ -8,18 +8,54 @@ export interface Project {
   github: string;
   images: string[];
   liveUrl?: string;
-  status?: 'Ongoing' | 'Finished' | 'Maintained';
+  status?: 'Ongoing' | 'Finished' | 'Maintained' | 'On Hold';
   license?: string;
   features?: string[];
 }
 
 export const projects: Project[] = [
   {
+    id: 'proj-13',
+    folderName: 'Personal Project',
+    title: 'Aino [MVC .NET Template]',
+    date: 'September 2026',
+    description: 'An architectural starter template for ASP.NET Core MVC applications, incorporating modular design patterns for monolithic web systems.',
+    tech: ['.NET', 'C#', 'ASP.NET Core MVC'],
+    github: 'https://github.com/HanashiroYuriku/Aino',
+    images: [],
+    status: 'On Hold',
+    features: ['MVC Architecture', 'Modular Structure']
+  },
+  {
+    id: 'proj-12',
+    folderName: 'Personal Project',
+    title: 'Pulonia [BE Network Pinger]',
+    date: 'August 2026',
+    description: 'A background telemetry service designed to monitor store network health and ping latency across distributed branches.',
+    tech: ['.NET', 'C#', 'Worker Service'],
+    github: 'https://github.com/HanashiroYuriku/Pulonia',
+    images: [],
+    status: 'On Hold',
+    features: ['Automated Telemetry', 'Network Ping Worker', 'Clean Architecture']
+  },
+  {
+    id: 'proj-11',
+    folderName: 'Personal Project',
+    title: 'Sandrone [FE Next.js Template]',
+    date: 'August 2026',
+    description: 'A modern Next.js frontend template built with TypeScript and Tailwind CSS, tailored for data monitoring dashboards and telemetry visualization.',
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn UI'],
+    github: 'https://github.com/HanashiroYuriku/sandrone',
+    images: [],
+    status: 'On Hold',
+    features: ['Dashboard Layout', 'Responsive Design', 'Component-Driven UI']
+  },
+  {
     id: 'proj-10',
     folderName: 'Personal Project',
     title: 'Columbina [BE .NET Template]',
     date: 'July 2026',
-    description: 'A .NET (C#) Backend API template designed with Clean Architecture, CQRS (Command Query Responsability Segregation), and Vertical Slice Architecture. This project focuses on scalability, security, and seamless team collaboration. Unit testing and dockerize are not implement yet.',
+    description: 'A .NET (C#) Backend API template designed with Clean Architecture, CQRS (Command Query Responsibility Segregation), and Vertical Slice Architecture. This project focuses on scalability, security, and seamless team collaboration. Unit testing and dockerize are not implement yet.',
     tech: ['.NET', 'C#', 'Cortex.Mediator', 'Pomelo'],
     github: 'https://github.com/HanashiroYuriku/Columbina',
     images: [],
@@ -30,7 +66,7 @@ export const projects: Project[] = [
       'Global Error Handler', 
       'JWT Authentication', 
       'RBAC', 
-      'QCRS',
+      'CQRS',
       'Transaction Manager', 
       'Pagination',
       'Swagger', 
